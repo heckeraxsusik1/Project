@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    background-color: rgb(98, 199, 233);
+    font-size: 15px;
+    text-align: center;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+}
+
+.Studio {
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+.scripts {
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+}
+
+.rozkaz {
+    background-color: lightseagreen;
+    text-align: center;
+}
+
+.Base {
+    text-align: center;
+    background-color: mediumaquamarine;
+}
