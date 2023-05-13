@@ -1,0 +1,78 @@
+<html>
+    <body>
+        <header>
+            <img src="https://o.remove.bg/downloads/db5971d0-f198-40c8-9df1-811104224061/%D0%91%D0%B5%D0%B7_%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-removebg-preview.png"/>
+            <h1>Як я створюю свою гру для проєкта</h1>
+        </header>
+        <main>
+            <h1 class="Studio">Roblox Studio</h1>
+            <h2>Спочатку я створив карту BasePlate</h2>
+            <p>потім я створив начальну локацію і почав с туторіалов із ютуба собирати свій меч я зібрав світовий меч він дуже крутиймені подобається але спочатку викликали труднощі зі скриптами і з анімацією і ще я создав пістолет</p>
+            <h1 class="scripts">Скрипти</h1>
+            <h2>Скрипти для світового меча</h2>
+            <p>Скрипт щоб працювала анімація і звук у світового меча</p>
+                <p>local sword = script.Parent
+local canDamage = sword.canDamage
+local anim = script.Animation
+local cooldown = true
+
+local sound = Instance.new("Sound",sword)
+sound.SoundId ="rbxassetid://1647165403"
+if not sound.IsLoaded then
+	sound.Loaded:Wait()
+end
+
+sword.Activated:Connect(function()
+
+	if cooldown == true then
+		sound:Play()
+		local humnoid = sword.Parent:FindFirstChildWhichIsA("Humanoid")
+		local loadedAnim = humnoid:LoadAnimation(anim)
+
+		cooldown = true
+		loadedAnim:Play()
+		canDamage.Value = true
+		wait(1)
+		loadedAnim:Stop()
+		canDamage.value = true
+		cooldown = true
+	end
+end)</p>
+<p>а ось щоб світовий меч зміг наносити урон</p>
+    <p>local hitbox = script.Parent.Hitbox
+local canDamage = script.Parent.canDamage
+
+hitbox.Touched:Connect(function(hit)
+	local hum = hit.Parent:FindFirstChildWhichIsA("Humanoid")
+	if canDamage.Value then
+		hum:TakeDamage(70)
+		canDamage.Value = false
+	end
+end)</p>
+<h2>Скрипти для пістолета</h2>
+<p>скрипт щоб пістолет стріляв local player</p>
+<p>script.Parent.Activated:Connect(function()
+ local mouse = game.Players.LocalPlayer:GetMouse()
+ script.Parent.Fire:FireServer(mouse.Target)
+end)
+
+script.Parent.Activated:Connect(function()
+ script.Название Звука:Play()
+end)</p>
+<p>скрипт щоб пістолет наносив урон</p>
+<p>script.Parent.Fire.OnServerEvent:Connect(function(plr, target)
+ if target.Parent.Humanoid then
+  target.Parent.Humanoid:TakeDamage(95)
+ end
+end)</p>
+<h1 class="rozkaz">коротко о оружках</h1>
+<h2>коротко про пістолет</h2>
+<p>щоб його создати потрібно спочатку зробити його каркас я зробив його дуже простим із двух партов. Іще потрібно його приварити щоб усьому цьому навчитися дивиться туторіали у ютубі, поставити RemoteEvent Добавити скрипти нормальний і локальний і усе готово.</p>
+<h2>Коротко про світовий меч</h2>
+<p>тут все складніше оформляємо його добавляємо хитбокс скрипти на дамаг и на атаку робимо анімацію для нього зварюємо робимо його без колізії добавляємо BoolValue і все готово насраюємо урон теж саме робимо і з пістолетом і все</p>
+<h1 class="Base">Коротко о карте і о атмосфері</h1>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
