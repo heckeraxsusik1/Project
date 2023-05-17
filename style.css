@@ -34,10 +34,10 @@ header img {
 }
 
 main {
-    border: solid rgb(121, 255, 210) 4px;
+    border: solid #66ffcc 4px;
     padding: 10px;
     border-radius: 10px;
-    background-color: rgba(229, 236, 245, 0.814);
+    background-color: #cce0ff;
 }
 
 footer {
