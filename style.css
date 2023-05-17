@@ -32,3 +32,15 @@ header img {
     text-align: center;
     background-color: mediumaquamarine;
 }
+
+main {
+    border: solid rgb(121, 255, 210) 4px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(229, 236, 245, 0.814);
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
