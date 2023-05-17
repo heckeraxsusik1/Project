@@ -66,14 +66,51 @@ end)</p>
   target.Parent.Humanoid:TakeDamage(95)
  end
 end)</p>
+<h2>cкрипти для броні</h2>
+<p>скрипт для броні локальний</p>
+<p>local tool = script.Parent
+local Armor = tool.Armor
+local remote = tool:WaitForChild("PlaceEvent")
+local player = game.Players.LocalPlayer
+local uppertorso = player.Character.UpperTorso
+local humanoid = player.Character.Humanoid
+
+tool.Activated:Connect(function()
+	
+	remote:FireServer(uppertorso, humanoid)
+	
+end)</p>
+<p>а ось це щоб добавлялися хп і  одягалася</p>
+<p>local tool = script.Parent
+local remote = tool.PlaceEvent
+
+remote.OnServerEvent:Connect(function(plr, uppertorso, humanoid)
+	
+	local weld = Instance.new("WeldConstraint", uppertorso)
+	weld.Part0 = uppertorso
+	weld.Part1 = tool.Armor
+	tool.Armor.Parent = game.Workspace
+	tool.Handle.WeldConstraint:Destroy()
+	humanoid.MaxHealth = 200
+	humanoid.Health = humanoid.Health + 100
+	
+	tool:Destroy()
+	
+end)</p>
 <h1 class="rozkaz">коротко о оружках</h1>
 <h2>коротко про пістолет</h2>
-<p>щоб його создати потрібно спочатку зробити його каркас я зробив його дуже простим із двух партов. Іще потрібно його приварити щоб усьому цьому навчитися дивиться туторіали у ютубі, поставити RemoteEvent Добавити скрипти нормальний і локальний і усе готово.</p>
+<p>щоб його создати потрібно спочатку зробити його каркас я зробив його дуже простим із двух партов. Іще потрібно його приварити щоб усьому цьому навчитися дивиться туторіали у ютубі, поставити RemoteEvent Добавити скрипти нормальний і локальний і ще потрібно добавити звук у пістолет і поставити його у Local script і усе готово.</p>
 <h2>Коротко про світовий меч</h2>
-<p>тут все складніше оформляємо його добавляємо хитбокс скрипти на дамаг и на атаку робимо анімацію для нього зварюємо робимо його без колізії добавляємо BoolValue і все готово насраюємо урон теж саме робимо і з пістолетом і все</p>
+<p>тут все складніше оформляємо його добавляємо хитбокс скрипти на дамаг и на атаку робимо анімацію для нього зварюємо робимо його без колізії добавляємо BoolValue і все готово настраюємо урон теж саме робимо і з пістолетом і все</p>
 <h1 class="Base">Коротко о карте і о атмосфері</h1>
+<h2>я просто зделал ее красивой зделал чтоб было красиво</h2>
         </main>
         <footer>
+            <h3>ось мої контакти</h3>
+            <p>номeр телефону +380971394541</p>
+            <p>електронна пошта mihailolesovii@gmail.com</p>
+            <p>Viber Scery Миша</p>
+            <p>Telegram @amogus228</p>
         </footer>
     </body>
 </html>
